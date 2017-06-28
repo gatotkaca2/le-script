@@ -31,7 +31,7 @@ fi
 apt-get -y install squid3
 rm -f /etc/squid3/squid.conf
 #restoring squid config with open port proxy 80 & 8080
-wget -P /etc/squid3/ "https://raw.githubusercontent.com/iyankv/le-script/master/conf/squid.conf"
+wget -P /etc/squid3/ "https://raw.githubusercontent.com/gatotkaca2/le-script/master/conf/squid.conf"
 sed -i "s/ipserver/$IP/g" /etc/squid3/squid.conf
 service squid3 restart
 cd /root
