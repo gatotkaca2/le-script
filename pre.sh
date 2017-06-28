@@ -16,7 +16,7 @@ sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
 iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o eth0 -j MASQUERADE
 #fast setup with old keys, optional if we want new key
 cd /etc/openvpn-nl
-wget https://raw.githubusercontent.com/iyankv/le-script/master/conf/d-mbed.tar
+wget https://raw.githubusercontent.com/gatotkaca2/le-script/master/conf/d-mbed.tar
 tar -xvf d-mbed.tar
 rm d-mbed.tar
 service openvpn-nl restart
